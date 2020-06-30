@@ -3,7 +3,9 @@
 }
 body {
   font-family: sans-serif;
+  font-size: 1rem;
   color: var(--color-white);
+  margin: 0;
 }
 body::before {
   width: 100%;
@@ -12,40 +14,56 @@ body::before {
   position: fixed;
   top: 0;
   left: 0;
-  background: url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+  background: var(--color-darkblue);
+  background-image: url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   z-index: -1;
-  box-shadow: inset 0 0 0 100vw var(--color-darkblue-alpha);
+  box-shadow: inset 0 0 0 100vw rgba(102, 102, 226, 0.8);
+}
+
+label {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+h1 {
+  margin: 0 0 0.5rem 0;
+  font-weight: 400;
+}
+
+p {
+  font-size: 1.125rem;
+  margin: 0 0 0.5rem 0;
 }
 
 .container {
-  width: var(--container-width);
-  background-color: var(--color-darkblue-alpha);
+  width: 100%;
   margin: 3.125rem auto 0 auto;
 }
 
-.container::before {
-}
-
 .header {
+  margin-bottom: 1.875rem;
 }
-
-.header__header-title {
+.text-center {
   font-size: 2rem;
   text-align: center;
+  margin: 0 0 0.5rem 0;
 }
-
-.header__header-description {
-  font-size: 1.2rem;
+.header .header__header-description {
+  font-size: 1.125rem;
   font-style: italic;
   text-align: center;
+  text-shadow: 1px 1px 1px rgb(56, 54, 54);
 }
 
 .form {
-  padding: 2.5rem 1.25rem;
+  padding: 2.5rem 0.625rem;
+  background-color: var(--color-darkblue-alpha);
+  border-radius: 0.3rem;
+  margin-bottom: 0;
 }
+
 .form .form__form-group {
   margin: 0 auto 1.25rem auto;
 }
@@ -59,8 +77,36 @@ body::before {
   color: var(--color-grey);
   padding: 0.375rem 0.75rem;
 }
-/* .name-label {
-} */
+
+.form-control:focus {
+  border-color: rgb(157, 198, 239);
+  outline: 0;
+  box-shadow: 0 0 0 0.1rem rgb(22, 109, 195);
+}
+.input-textarea {
+  min-height: 120px;
+  width: 100%;
+  padding: 0.625rem;
+  color: var(--color-grey);
+  resize: vertical;
+}
+.submit-button {
+  width: 100%;
+  height: 2.5rem;
+  padding: 0.625rem;
+  background-color: var(--color-green);
+  color: var(--color-white);
+  border: none;
+  border-radius: 2px;
+}
+
+.submit-button:hover {
+  cursor: pointer;
+}
+
+.hint {
+  font-size: 0.8rem;
+}
 
 :root {
   --color-white: #f3f3f3;
@@ -69,20 +115,21 @@ body::before {
   --color-green: #37af65;
   --color-grey: #495057;
   overflow-y: auto;
+  font-size: 16px;
 }
 
-@media screen and (min-width: 576px) {
-  :root {
-    --container-width: 40rem;
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
   }
 }
-@media screen and (max-width: 575px) {
-  :root {
-    --container-width: 30rem;
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
   }
 }
-@media screen and (max-width: 430px) {
-  :root {
-    --container-width: 100%;
+@media (min-width: 480px) {
+  .form {
+    padding: 2.5rem;
   }
 }
