@@ -1,0 +1,19 @@
+{
+  "name": "front-form",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EvgenyGrinko/Front-end_Form.git"
+  },
+  "author": "EvgenyGrinko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EvgenyGrinko/Front-end_Form/issues"
+  },
+  "homepage": "https://github.com/EvgenyGrinko/Front-end_Form#readme"
+}
