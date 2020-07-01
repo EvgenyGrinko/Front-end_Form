@@ -1,53 +1,60 @@
 <html>
   <head>
     <title> </title>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="./styles.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/styles.css">
   </head>
   <body translate="no">
-    <div class="container">
-      <header class="header">
-        <h1 class="text-center">freeCodeCamp Survey Form</h1>
-        <p class="text-center header__header-description">
-          Thank you for taking the time to help us improve the platform
-        </p>
-      </header>
-      <form class="form" action="#" method="POST">
-        <div class="form__form-group">
-          <label for="userName" >Name</label>
-          <input
-            type="text"
-            class="form-control"
-            name="userName"
-            placeholder="Enter your name"
-            required
-          >
+    <div class="body">
+      <div class="body__header header">
+        <div class="header__title">
+          freeCodeCamp Survey Form</div>
+        <div class="header__subtitle">
+          Thank you for taking the time to help us improve the platform</div>
+      </div>
+      <form class="body__form form">
+          <div class="form__item item">
+            <div class="item__header">
+              <label for="userName" >Name</label>
+            </div>
+            <input
+              type="text"
+              class="item__input"
+              name="userName"
+              placeholder="Enter your name"
+              required
+            >  
+          </div>
+          <div class="form__item item">
+            <div class="item__header">
+              <label for="userEmail" >Email</label>
+            </div>
+            <input
+              type="email"
+              class="item__input"
+              name="userEmail"
+              placeholder="Enter your Email"
+              required
+            >  
         </div>
-        <div class="form__form-group">
-          <label for="userEmail">Email</label>
-          <input
-            class="form-control"
-            type="email"
-            name="userEmail"
-            placeholder="Enter your Email"
-            required
-          >
-        </div>
-        <div class="form__form-group">
-          <label for="userAge">Age <span class="hint">(optional)</span></label>
+        <div class="form__item item">
+          <div class="item__header">
+            <label for="userEmail" >Age <span class="hint">(optional)</span></label>
+          </div>
           <input
             type="number"
             min="10"
             max="99"
-            class="form-control"
+            class="item__input"
             name="userAge"
             placeholder="Age"
-            required
-          >
+          >  
         </div>
-        <div class="form__form-group">
-          <p>Which option best describes your current role?</p>
-          <select class="form-control" name="userRole" required>
+        <div class="form__item item">
+          <div class="item__header">Which option best describes your current role?</div>
+          <select class="item__select" name="userRole" required>
             <option value="" disabled selected>Select current role</option>
             <option value="Student">Student</option> >
             <option value="Full Time Job">Full Time Job</option>
@@ -56,21 +63,21 @@
            <option value="Other">Other</option> 
           </select>
         </div>
-        <div class="form__form-group">
-          <p>Would you recommend freeCodeCamp to a friend?</p>
-          <label>
+        <div class="form__item item">
+          <div class="item__header">Would you recommend freeCodeCamp to a friend?</div>
+          <label class="item__radio-button">
             <input type="radio" name="recommend-radiobutton" value="Definitely" checked>Definitely
           </label>
-          <label>
+          <label class="item__radio-button">
             <input type="radio" name="recommend-radiobutton" value="Maybe">Maybe
           </label>
-          <label>
+          <label class="item__radio-button">
             <input type="radio" name="recommend-radiobutton" value="Not sure">Not sure
           </label>
         </div>
-        <div class="form__form-group">
-          <p for="userRole">What is your favorite feature of freeCodeCamp?</p>
-          <select class="form-control" name="userRole" required>
+        <div class="form__item item">
+          <div class="item__header">What is your favorite feature of freeCodeCamp?</div>
+          <select class="item__select" name="userFavFeature" required>
             <option value="" disabled selected>Select an option</option>
             <option value="Challenges">Challenges</option>
             <option value="Projects">Projects</option>
@@ -78,84 +85,51 @@
             <option value="Open Source">Open Source</option>
           </select>
         </div>
-        <div class="form__form-group">
-          <p for="improve-chechbox"></p>
-            What would you like to see improved? <span class="hint">(Check all that apply)</span>
-          </p>
-          <label>
-            <input
-              type="checkbox"
-              name="improve-chechbox"
-              value="Front-end Projects"
-            >Front-end Projects
+        <div class="form__item item">
+          <div class="item__header">What would you like to see improved? 
+            <span class="hint">(Check all that apply)</span>
+          </div>
+          <label class="item__checkbox">
+            <input type="checkbox" name="improve-chechbox" value="Front-end Projects">Front-end Projects
           </label>
-          <label>
-            <input
-              type="checkbox"
-              name="improve-chechbox"
-              value="Back-end Projects"
-            >Back-end Projects
+          <label class="item__checkbox">
+            <input type="checkbox" name="improve-chechbox" value="Back-end Projects">Back-end Projects
           </label>
-          <label>
-            <input
-              type="checkbox"
-              name="improve-chechbox"
-              value="Data Visualization"
-            >Data Visualization
+          <label class="item__checkbox">
+            <input type="checkbox" name="improve-chechbox" value="Data Visualization">Data Visualization
           </label>
-          <label>          
-            <input
-              type="checkbox"
-              name="improve-chechbox"
-              value="Challenges"
-            >Challenges
+          <label class="item__checkbox">          
+            <input type="checkbox" name="improve-chechbox" value="Challenges">Challenges
           </label>
-          <label>          
-            <input
-              type="checkbox"
-              name="improve-chechbox"
-              value="Open Source Community"
-            >Open Source Community    
+          <label class="item__checkbox">          
+            <input type="checkbox" name="improve-chechbox" value="Open Source Community">Open Source Community    
           </label>
-          <label>          
-            <input
-              type="checkbox"
-              name="improve-chechbox"
-              value="Gitter help rooms"
-            >Gitter help rooms
+          <label class="item__checkbox">          
+            <input type="checkbox" name="improve-chechbox" value="Gitter help rooms">Gitter help rooms
           </label>
-          <label>          
-            <input type="checkbox" name="improve-chechbox" value="Videos"
-          >Videos
+          <label class="item__checkbox">          
+            <input type="checkbox" name="improve-chechbox" value="Videos">Videos
           </label>
-          <label>          
-            <input
-              type="checkbox"
-              name="improve-chechbox"
-              value="City Meetups"
-            >City Meetupsts
+          <label class="item__checkbox">          
+            <input type="checkbox" name="improve-chechbox" value="City Meetups">City Meetupsts
           </label>
-          <label>          
+          <label class="item__checkbox">          
             <input type="checkbox" name="improve-chechbox" value="Wiki">Wiki
           </label>
-          <label>          
+          <label class="item__checkbox">          
             <input type="checkbox" name="improve-chechbox" value="Forum">Forums
           </label>
-          <label>          
-            <input
-            type="checkbox"
-            name="improve-chechbox"
-            value="Additional Courses">Additional Courses
+          <label class="item__checkbox">          
+            <input type="checkbox" name="improve-chechbox" value="Additional Courses">Additional Courses
           </label>
-
         </div>
-        <div class="form__form-group">
-          <label for="comments">Any comments or suggestions?</label>
-          <textarea class="input-textarea" name="comments" placeholder="Enter your comment here..."></textarea>
+        <div class="form__item item">
+          <div class="item__header">
+            <label for="comments">Any comments or suggestions?</label>
+          </div>
+          <textarea class="item__textarea" name="comments" placeholder="Enter your comment here..."></textarea>
         </div>
-        <div class="form__form-group form__submit-button">
-          <button class="submit-button">Submit</button>
-        </div>
+        <button class="form__submit-bitton">Submit</button>
       </form>
     </div>
   </body>
